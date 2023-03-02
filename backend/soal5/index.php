@@ -58,9 +58,7 @@
         <div class="lg:col-span-1 sm:w-screen my-12">
           <!-- Bagian logic -->
           <?php if(isset($_POST['kirim'])) :?>
-            <?php
-            process_input($_POST);
-            ?>
+            <?php process_input($_POST); ?>
           <?php endif;?>
           <!-- end logic -->
 
