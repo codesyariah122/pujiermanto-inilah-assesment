@@ -30,7 +30,7 @@ const tampilkanAlert = (type, val=null) => {
 			Swal.fire({
 				icon: type,
 				title: 'Oops...',
-				text: 'Inputkan nama harus > 3 karakter!'
+				text: 'Please input the name must be > 3 character!'
 			})
 		break;
 

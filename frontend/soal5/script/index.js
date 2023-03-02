@@ -16,11 +16,13 @@ $(document).ready(function() {
 			if(validTypeInput(nama)) {
 				if(!validLength(nama)) {
 					tampilkanAlert('error')
+					objRef.inputNama.val('')
 				} else {
 					formProcess(nama)
 				}
 			} else {
 				tampilkanAlert('failed')
+				objRef.inputNama.val('')
 			}
 		} else {
 			tampilkanAlert("empty")
