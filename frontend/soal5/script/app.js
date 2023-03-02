@@ -54,7 +54,7 @@ const tampilkanAlert = (type, val=null) => {
 			Swal.fire({
 				position: 'top-end',
 				icon: type,
-				title: `Halo ${val}, selamat datang di portal berita inilah.com`,
+				title: `Halo ${capitalize_name(val)}, selamat datang di portal berita inilah.com`,
 				showConfirmButton: false,
 				timer: 3500
 			})
@@ -63,6 +63,16 @@ const tampilkanAlert = (type, val=null) => {
 		default:
 			console.log("Alert not send")
 	}
+}
+
+
+function capitalize_name(val) {
+	let strings = val.split(" ")
+	for (let i = 0; i < strings.length; i++) {
+		strings[i] = strings[i].charAt(0).toUpperCase() + strings[i].slice(1);
+
+	}
+	return strings.join(" ")
 }
 
 // Proccessing all input with clear and validation check

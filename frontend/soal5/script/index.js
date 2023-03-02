@@ -11,7 +11,7 @@ $(document).ready(function() {
 		e.preventDefault()
 
 		const nama = objRef.inputNama.val()
-		console.log(nama)
+
 		if(notEmpty(nama) && nama !== '') {
 			if(validTypeInput(nama)) {
 				if(!validLength(nama)) {
