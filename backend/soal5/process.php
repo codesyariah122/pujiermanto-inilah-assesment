@@ -33,12 +33,12 @@ function process_input($request) {
         else:
           show_result("failed");
         endif;
-        
+
       endif;
     }
 }
 
-function show_result($type, $data=[]){
+function show_result($type){
   switch($type):
     case "error":
       require_once dirname(__FILE__) . '/partials/error.php';
