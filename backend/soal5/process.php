@@ -16,9 +16,10 @@ function process_input($request) {
       else:
         if(check_valid_string($request['nama'])):
           if(check_length_string($request['nama'])):
+            $capitalize_name = ucwords($request['nama']);
             $data = [
-              'nama' => $_POST['nama'],
-              'message' => "Hallo, {$_POST['nama']}, selamat datang di inilah.com portal news"
+              'nama' => $request['nama'],
+              'message' => "Hallo, {$capitalize_name}, selamat datang di inilah.com portal news"
             ];
             create_session($data);
             show_result("success");
@@ -57,6 +58,6 @@ function show_result($type, $data=[]){
 
 
 function create_session($data) {
-  $_SESSION['nama'] = $data['nama'];
+  $_SESSION['nama'] = htmlspecialchars((ucwords($data['nama'])));
   $_SESSION['message'] = $data['message'];
 }
