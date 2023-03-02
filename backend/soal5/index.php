@@ -61,9 +61,7 @@
             <?php
             process_input($_POST);
             ?>
-            <?php if(!empty($_POST['nama'])): ?>
-
-          <?php endif; endif;?>
+          <?php endif;?>
           <!-- end logic -->
 
            <!-- Form Input Nama -->
