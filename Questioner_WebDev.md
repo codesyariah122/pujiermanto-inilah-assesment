@@ -2,6 +2,11 @@
 
 1. # Tools untuk coding
    - VsCode dengan plugins2 lengkapnya untuk mempercepat process development bagi fullstack developer
+   - LAMP ( Linux , Apache, Mysql, phpMyAdmin)
+   - Laradock ( docker laravel )
+   - Git (Gitlab, github, bitbucket, jira)
+   - Laravel ( Fullstack Project)
+   - NuxtJS | NextJS ( Project Frontend )
    
    # Tools untuk tracking
    - Tools yang berhubungan dengan google adsense yaitu google analytic, google tag manager
