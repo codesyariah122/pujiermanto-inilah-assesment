@@ -51,7 +51,7 @@ function show_result($type, $data=[]){
     break;
 
       default:
-        echo "no alert";
+        echo "no condition";
   endswitch;
 }
 
