@@ -6,6 +6,7 @@
    - Laradock ( docker laravel )
    - Git (Gitlab, github, bitbucket, jira)
    - Laravel ( Fullstack Project)
+   - Kadang ada project menggunakan NodeJS, saya pakai (Express) untuk tech dev nya menggunakan MERN(MonogDB, Express, React, NodeJS)
    - NuxtJS | NextJS ( Project Frontend )
    - Spotify ( Buat dengerin podcast )
    - Kopi Pahit ☕ ( tapi bukan kopi senja )
