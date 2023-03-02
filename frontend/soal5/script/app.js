@@ -86,7 +86,7 @@ function capitalize_name(val) {
 
 // Proccessing all input with clear and validation check
 const formProcess = (val) => {
-	if(val)
+	if(val) {
 		objRef.loadingBtn.removeClass('hidden')
 		objRef.textBtn.addClass('hidden')
 		objRef.textBtn.removeClass('block')
@@ -96,6 +96,7 @@ const formProcess = (val) => {
 			objRef.textBtn.removeClass('hidden')
 			objRef.inputNama.val('')
 		}, 1500)
+	}
 }
 
 // Redirect button to portal inilah
@@ -135,8 +136,8 @@ function render_result(selector, el, data) {
 
 const goTo = (url) => {
 	objRef.showResult.hide('slow').fadeOut(200);
-	// localStorage.removeItem('input-nama')
+	localStorage.removeItem('input-nama')
 	setTimeout(() => {
-		window.open(url,'popUpWindow','height=400,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;
+		window.open(url,'popUpWindow','height=200,width=400,left=10,top=10,,scrollbars=yes,menubar=no'); return false;
 	}, 1500)
 }
