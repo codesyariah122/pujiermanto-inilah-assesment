@@ -12,134 +12,114 @@
 
   <!DOCTYPE html>
   <html>
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
-      />
-      <script src="https://cdn.tailwindcss.com/3.2.4"></script>
-      <script src="https://https-github-com-codesyariah122-pujie-git-c18a90-codesyariah122.vercel.app/script/tailwind.config.js"></script>
-      <title>Inilah Dotcom Assesment</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+    <script src="https://https-github-com-codesyariah122-pujie-git-c18a90-codesyariah122.vercel.app/script/tailwind.config.js"></script>
+    <title>Inilah Dotcom Assesment</title>
+  </head>
   
-    <body>
-      <div class="container mx-auto">
-        <div
-          class="rounded-lg bg-neutral-100 mt-12 text-neutral-700 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30"
-        >
-          <div class="grid lg:grid-cols-2 gap-4 p-12">
-            <div class="col-span-1 w-[500px]">
-              <h2 class="mb-5 text-3xl font-semibold">Input Name</h2>
-              <ul>
-                  <li>Input tidak boleh kosong (Wajib Di isi)</li>
-                  <li>Karakter harus lebih dari > 3 karakter</li>
-                  <li>Karakter hanya boleh huruf</li>
-              </ul>
-              <hr
-                class="my-6 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-30"
+  <body>
+    <div class="container mx-auto">
+      <div
+      class="rounded-lg bg-neutral-100 mt-12 text-neutral-700 shadow-lg dark:bg-neutral-600 dark:text-neutral-200 dark:shadow-black/30"
+      >
+      <div class="grid lg:grid-cols-2 gap-4 p-12">
+        <div class="col-span-1 w-[500px]">
+          <h2 class="mb-5 text-3xl font-semibold">Input Name</h2>
+          <ul>
+            <li>Input tidak boleh kosong (Wajib Di isi)</li>
+            <li>Karakter harus lebih dari > 3 karakter</li>
+            <li>Karakter hanya boleh huruf</li>
+          </ul>
+          <hr
+          class="my-6 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-30"
+          />
+          <button
+          onClick="redirect('https://www.inilah.com/')"
+          type="button"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          class="rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+          >
+          Inilah Portal
+        </button>
+      </div>
+      <!-- Form Input Nama -->
+      <div class="lg:col-span-1 sm:w-screen my-12">
+        <?php if(isset($_POST['kirim'])) :?>
+          <?php
+          process_input($_POST);
+          ?>
+          <?php if(!empty($_POST['nama'])): ?>
+
+        <?php endif; endif;?>
+
+        <div class="flex justify-start">
+          <div
+          class="lg:block lg:max-w-lg rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700"
+          >
+          <form id="form-process" action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
+            <blockquote class="bg-gray-200 mb-12 w-[350px] p-6">Silahkan isi input nama, jika benar akan tampil alert / popup info.</blockquote>
+            <small class="text-red-700">* Wajib diisi</small>
+            <div class="relative mb-3 xl:w-96" data-te-input-wrapper-init>
+              <input
+              name="nama"
+              type="text"
+              class="peer block min-h-[auto] rounded border-0 bg-neutral-100 py-[0.32rem] w-full px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+              id="input-nama"
+              aria-label="readonly input example"
               />
-              <button
-                onClick="redirect('https://www.inilah.com/')"
-                type="button"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                class="rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-              >
-                Inilah Portal
-              </button>
-            </div>
-            <!-- Form Input Nama -->
-            <div class="lg:col-span-1 sm:w-screen">
-              <div class="flex justify-start">
-                <div
-                  class="lg:block lg:max-w-lg rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700"
-                >
-                  <form id="form-process" action="<?php $_SERVER['PHP_SELF'];?>" method="POST">
-                  <blockquote class="bg-gray-200 mb-12 w-[350px] p-6">Silahkan isi input nama, jika benar akan tampil alert / popup info.</blockquote>
-                  <small class="text-red-700">* Wajib diisi</small>
-                    <div class="relative mb-3 xl:w-96" data-te-input-wrapper-init>
-                      <input
-                        name="nama"
-                        type="text"
-                        class="peer block min-h-[auto] rounded border-0 bg-neutral-100 py-[0.32rem] w-full px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                        id="input-nama"
-                        aria-label="readonly input example"
-                      />
-                      <label
-                        for="input-nama"
-                        class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
-                        >Input Nama Disini ...
-                      </label>
-                    </div>
-                    <button
-                      name="kirim"
-                      type="submit"
-                      class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                      data-te-ripple-init
-                      data-te-ripple-color="light"
-                    >
-                      <div
-                        id="loading-button"
-                        class="flex items-center justify-center hidden"
-                      >
-                        <div
-                          class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-                          role="status"
-                        >
-                          <span
-                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                            >Loading...</span
-                          >
-                        </div>
-                      </div>
-                      <span id="text-button" class="block">Button</span>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
+              <label
+              for="input-nama"
+              class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
+              >Input Nama Disini ...
+            </label>
           </div>
+          <button
+          name="kirim"
+          type="submit"
+          class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          >
+          <div
+          id="loading-button"
+          class="flex items-center justify-center hidden"
+          >
+          <div
+          class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+          role="status"
+          >
+          <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Loading...</span
+          >
         </div>
       </div>
-      
-      <?php if(isset($_POST['kirim'])) :?>
-        <?php
-          process_input($_POST);
-        ?>
-        <div class="container mx-auto py-24">
-          <div class="flex justify-center">
-            <div
-              class="block max-w-full rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700">
-              <h5
-                class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                Card title
-              </h5>
-              <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
-              </p>
-              <button
-                type="button"
-                class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-                data-te-ripple-init
-                data-te-ripple-color="light">
-                Button
-              </button>
-            </div>
-          </div>
-        </div>
-      <?php endif;?>
-  
-      <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    </body>
-  </html>
+      <span id="text-button" class="block">Button</span>
+    </button>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
 
   

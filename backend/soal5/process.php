@@ -1,58 +1,62 @@
 <?php
-$data = [];
+session_start();
 
-function check_valid_string($string) {
- return ctype_alpha($string);
+function check_valid_string($val) {
+ return ctype_alpha(str_replace(' ', '', $val));
+}
+
+function check_length_string($val) {
+  return strlen($val) > 3 ? true : false;
 }
 
 function process_input($request) {
-    if(isset($request['nama'])) {
-      if(check_valid_string($_POST['nama'])):
-        var_dump("Ok");
+    if(isset($request['kirim'])) {
+      if(empty($request['nama'])):
+        show_result("error");
       else:
-        show_alert("error");
+        if(check_valid_string($request['nama'])):
+          if(check_length_string($request['nama'])):
+            $data = [
+              'nama' => $_POST['nama'],
+              'message' => "Hallo, {$_POST['nama']}, selamat datang di inilah.com portal news"
+            ];
+            create_session($data);
+            show_result("success");
+          else:
+            show_result('wrong');
+          endif;
+        else:
+          show_result("failed");
+        endif;
       endif;
     }
 }
 
-function show_alert($type){
+function show_result($type, $data=[]){
   switch($type):
     case "error":
-    echo "
-      <script>
-      Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Something went wrong!',
-        })
-      </script>";
+      require_once dirname(__FILE__) . '/partials/error.php';
     break;
     
     case "success":
-      echo "
-      <script>
-        Swal.fire(
-          'Good job!',
-          'You clicked the button!',
-          'success'
-        )
-        </script>
-      ";
+      require_once dirname(__FILE__). '/partials/success.php';
     break;
     
     case "failed":
-      echo "
-      <script>
-        Swal.fire(
-          'The Internet?',
-          'That thing is still around?',
-          'question'
-        )
-        </script>
-      ";
-      break;
-      
+      require_once dirname(__FILE__). '/partials/failed.php';
+    break;
+
+    case "wrong":
+      require_once dirname(__FILE__). '/partials/wrong.php';
+    break;
+
       default:
         echo "no alert";
-    endswitch;
+  endswitch;
+}
+
+
+function create_session($data) {
+  $_SESSION['nama'] = $data['nama'];
+  $_SESSION['message'] = $data['message'];
 }
