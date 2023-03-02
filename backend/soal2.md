@@ -1,0 +1,4 @@
+#### Jawaban untuk soal no. 2 / backend
+Untuk permasalahan migrasi database wordpress ke website non wordpress saya sendiri belum pernah menemui kondisi seperti ini, jadi jawaban ini adalah sesuai dengan bayangan saya dari sisi backend. Jika sebuah data yang di butuhkan adalah misal data di table ```news``` maka langkah pertama saya adalah mengexport dulu seluruh database di server / SQL dalam kasus ini, 
+export database : ```mysqldump -u NAMAUSER -p NAMADATABASE > dbexport.sql``` hasil export akan digenerate dalam file ```dbexport.sql```  
+Kemudian saya ambil source data dari table ```news``` berdasarkan source query di file ```dbexport.sql```
