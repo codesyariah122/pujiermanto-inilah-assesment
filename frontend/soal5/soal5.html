@@ -35,10 +35,10 @@
           <div class="col-span-1 w-[500px]">
             <h2 class="mb-5 text-3xl font-semibold">Input Name</h2>
             <ul>
-				<li>Input tidak boleh kosong (Wajib Di isi)</li>
-				<li>Karakter harus lebih dari > 3 karakter</li>
-				<li>Karakter hanya boleh huruf</li>
-			</ul>
+        <li>Input tidak boleh kosong (Wajib Di isi)</li>
+        <li>Karakter harus lebih dari > 3 karakter</li>
+        <li>Karakter hanya boleh huruf</li>
+      </ul>
             <hr
               class="my-6 h-0.5 border-t-0 bg-neutral-200 opacity-100 dark:opacity-30"
             />
@@ -54,15 +54,19 @@
           </div>
           <!-- Form Input Nama -->
           <div class="lg:col-span-1 sm:w-screen">
+
+            <!-- SHow Result from Success input -->
+          <div class="container mx-auto mb-12" id="show-result"></div>
+
             <div class="flex justify-start">
               <div
                 class="lg:block lg:max-w-lg rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700"
               >
                 <form id="form-process">
-				<blockquote class="bg-gray-200 mb-12 w-[350px] p-6">Silahkan isi input nama, jika benar akan tampil alert / popup info.</blockquote>
+        <blockquote class="bg-gray-200 mb-12 w-[350px] p-6">Silahkan isi input nama, jika benar akan tampil alert / popup info.</blockquote>
                 <small class="text-red-700">* Wajib diisi</small>
                   <div class="relative mb-3 xl:w-96" data-te-input-wrapper-init>
-					<input
+          <input
                       type="text"
                       class="peer block min-h-[auto] rounded border-0 bg-neutral-100 py-[0.32rem] w-full px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:bg-neutral-700 dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                       id="input-nama"

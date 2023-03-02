@@ -5,9 +5,10 @@
  * @param Portofolio: https://pujiermanto-portfolio.vercel.app
  * @param Github: https://github.com/codesyariah122
  */
-
 $(document).ready(function() {
+
 	objRef.formProcess.submit((e) => {
+
 		e.preventDefault()
 
 		const nama = objRef.inputNama.val()
