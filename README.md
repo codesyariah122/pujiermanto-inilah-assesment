@@ -1,6 +1,6 @@
 ### Inilah Dotcom Assesment
 ##### Notes :
-***Assesment ini terdiri dari 2 bagian antara lain ```Frontend``` dan ```Backend```, untuk tiap part <u>Backend</u> atau <u>Frontend</u> dikerjakan terpisah dalam folder masing-masing part***
+***Assesment ini terdiri dari 2 bagian antara lain ```Frontend``` dan ```Backend```, untuk tiap part <u>Backend</u> atau <u>Frontend</u> dikerjakan terpisah dalam folder masing-masing sesuai nama soal di questioner webdev part***
 
 
 #### Requirements
