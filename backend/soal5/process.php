@@ -11,10 +11,13 @@ function check_length_string($val) {
 
 function process_input($request) {
     if(isset($request['kirim'])) {
+
       if(empty($request['nama'])):
         show_result("error");
       else:
+
         if(check_valid_string($request['nama'])):
+
           if(check_length_string($request['nama'])):
             $capitalize_name = ucwords($request['nama']);
             $data = [
@@ -26,9 +29,11 @@ function process_input($request) {
           else:
             show_result('wrong');
           endif;
+
         else:
           show_result("failed");
         endif;
+        
       endif;
     }
 }
