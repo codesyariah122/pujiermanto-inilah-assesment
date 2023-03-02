@@ -8,7 +8,7 @@
    - Laravel ( Fullstack Project)
    - NuxtJS | NextJS ( Project Frontend )
    - Spotify ( Buat dengerin podcast )
-   - Kopi Pahit ( tapi bukan kopi senja ) 
+   - Kopi Pahit ☕ ( tapi bukan kopi senja )
    
    # Tools untuk tracking
    - Tools yang berhubungan dengan google adsense yaitu google analytic, google tag manager
